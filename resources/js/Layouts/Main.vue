@@ -1,13 +1,17 @@
-<script setup></script>
+<script setup>
+
+import Header from "./Components/Header.vue";
+
+
+
+  
+
+</script>
 
 <template>
-    <header class="bg-slate-800 text-white">
-        <nav class="p-6 mx-auto max-w-screen-lg">
-            <Link :href="route('home')">Home</Link>
-        </nav>
-    </header>
+    <Header/>
 
-    <main class="p-6">
+    <main class="p-6 mx-auto max-w-screen-lg">
         <slot />
     </main>
 </template>
