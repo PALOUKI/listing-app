@@ -11,41 +11,38 @@ import SessionMessage from '../../Layouts/Components/SessionMessage.vue';
 
 
 const form = useForm({
-    email:"",
+    password:"",
 })
 
-defineProps({
-    status:String
-})
 
 const submit = () => {
-    form.post(route('password.email'))
+    form.post(route('password.confirm'),{
+        onFinish: () => form.reset()
+    })
 }
 
 </script>
 
 <template>
-    <Head title="- Forgot Password"/>
+    <Head title="- Password confirmation"/>
 
     <Container>
 
-        <SessionMessage :status="status"/>
+            <Title>Confirmez votre mot de passe</Title>
 
-        <Title class="my-2">Réinitialiser son mot de passe</Title>
-            <p>
-                Mot de passe oublié ? Pas de problème. Il suffit de nous indiquer votre 
-                adresse e-mail et nous vous enverrons un lien de réinitialisation de mot 
-                de passe qui vous permettra d'en choisir un nouveau.
+            <p class="my-2"> 
+                Pour des raisons de sécurité, veuillez confirmer votre mot de passe 
+                avant d’accéder à cette section.
             </p>
 
         <form @submit.prevent="submit" class="space-y-6" action="#">
             
             <InputField
-                label="Email"
-                icon="at"
-                placeholder="Entrez votre email"
-                v-model="form.email"
-                :errorMessage="form.errors.email"
+                label="Mot de passe"
+                icon="key"
+                placeholder="Entrez votre mot de passe"
+                v-model="form.password"
+                :errorMessage="form.errors.password"
 
             />
 

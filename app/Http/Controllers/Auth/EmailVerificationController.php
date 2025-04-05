@@ -21,7 +21,7 @@ class EmailVerificationController extends Controller
 
         $request->fulfill();
 
-        return redirect()->route('about');
+        return redirect()->route('dashboard');
     }
 
     public function resend(Request $request)

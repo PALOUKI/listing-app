@@ -20,38 +20,6 @@ const user = computed(() =>page.props.auth?.user)
           <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Listing</span>
       </a>
-
-
-      <!-- <div v-if="user">
-        <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-
-          <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-            <span class="sr-only">Open user menu</span>
-            <img class="w-8 h-8 rounded-full" :src="okImage" alt="user photo"> 
-          </button>
-        
-          <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-            <div class="px-4 py-3">
-              <span v-if="user" class="block text-sm text-gray-900 dark:text-white">{{ user.name }}</span>
-              <span v-if="user" class="block text-sm  text-gray-500 truncate dark:text-gray-400">{{ user.email }}</span>
-            </div>
-            <ul class="py-2" aria-labelledby="user-menu-button">
-              <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                  Mon compte
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                  Me déconnecter
-                </a>
-              </li>
-            </ul>
-          </div> 
-        </div>
-      </div> -->
-
-
      
       <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -69,7 +37,7 @@ const user = computed(() =>page.props.auth?.user)
           <NavLink routeName="home" componentName="Home">Quiz</NavLink>        
           <NavLink routeName="login" componentName="Auth/Login">Quiz</NavLink>
           <NavLink class="md:mr-24" routeName="register" componentName="Auth/Register">Quiz</NavLink>   
-          <NavLink class="flex md:hidden" routeName="register" componentName="Auth/Register">Mon compte</NavLink> 
+          <NavLink class="flex md:hidden" routeName="dashboard" componentName="Dashboard">Mon compte</NavLink> 
 
           <div v-if="user" class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button 
@@ -92,7 +60,20 @@ const user = computed(() =>page.props.auth?.user)
                   </div>
                   <ul class="py-2" aria-labelledby="user-menu-button">
                     <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                      <a 
+                        :href="route('profile.edit')" 
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
+                         dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
+                        Profil
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        :href="route('dashboard')" 
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
+                         dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      >
                         Mon compte
                       </a>
                     </li>
