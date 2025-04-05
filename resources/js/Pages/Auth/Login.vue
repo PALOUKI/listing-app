@@ -32,7 +32,7 @@ const submit = () => {
 <template>
     <Head title="- Se connecter"/>
 
-    <Container>
+    <Container class="pt-24">
         
 
         <form @submit.prevent="submit" class="space-y-6" action="#">

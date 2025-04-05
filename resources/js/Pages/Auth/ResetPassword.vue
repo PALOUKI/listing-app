@@ -4,7 +4,6 @@ import Container from '../../Layouts/Components/Auth/Container.vue';
 import Title from '../../Layouts/Components/Auth/Title.vue';
 import InputField from '../../Layouts/Components/InputField.vue';
 import PrimaryBtn from '../../Layouts/Components/PrimaryBtn.vue';
-import TextLink from '../../Layouts/Components/TextLink.vue';
 
 const props = defineProps({
     token:String,
@@ -30,7 +29,7 @@ const submit = () => {
 <template>
     <Head title="- Reset password"/>
 
-    <Container>
+    <Container class="pt-24">
         
 
         <form @submit.prevent="submit" class="space-y-6" action="#">

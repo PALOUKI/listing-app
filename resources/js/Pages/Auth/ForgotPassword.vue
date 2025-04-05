@@ -27,7 +27,7 @@ const submit = () => {
 <template>
     <Head title="- Forgot Password"/>
 
-    <Container>
+    <Container class="pt-24">
 
         <SessionMessage :status="status"/>
 

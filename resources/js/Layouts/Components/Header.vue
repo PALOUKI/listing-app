@@ -100,7 +100,7 @@ const user = computed(() =>page.props.auth?.user)
           >
             <i class="fa-solid fa-circle-half-stroke"></i> 
           </button>
-
+          
         </ul>
       </div>
 

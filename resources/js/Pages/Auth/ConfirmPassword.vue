@@ -26,7 +26,7 @@ const submit = () => {
 <template>
     <Head title="- Password confirmation"/>
 
-    <Container>
+    <Container class="pt-24">
 
             <Title>Confirmez votre mot de passe</Title>
 
