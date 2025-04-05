@@ -18,7 +18,7 @@ const submit = () => {
 
 <template>
     <Head title = "- Email verification"/>
-    <Container>
+    <Container class="pt-24">
         <SessionMessage :status="status"/>
         <p>
             Merci de vous être inscrit ! Avant de commencer, pourriez-vous vérifier

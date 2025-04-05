@@ -1,7 +1,13 @@
 <script setup>
+import UpdateInfo from './partials/UpdateInfo.vue';
 
+defineProps({
+    user:Object,
+    status:String
+})
 </script>
 
 <template>
-    <h1 class="text-3xl">Profile</h1>
+    <Head title="- Profile"/>
+    <UpdateInfo :user="user" :status="status"/>
 </template>
