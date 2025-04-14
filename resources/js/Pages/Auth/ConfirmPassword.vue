@@ -26,7 +26,7 @@ const submit = () => {
 <template>
     <Head title="- Password confirmation"/>
 
-    <Container class="pt-24">
+    <Container class="pt-24" screen="md">
 
             <Title>Confirmez votre mot de passe</Title>
 
@@ -40,6 +40,7 @@ const submit = () => {
             <InputField
                 label="Mot de passe"
                 icon="key"
+                type="password"
                 placeholder="Entrez votre mot de passe"
                 v-model="form.password"
                 :errorMessage="form.errors.password"

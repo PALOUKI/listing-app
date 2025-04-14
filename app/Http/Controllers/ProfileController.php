@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
+
+use function Laravel\Prompts\spin;
 
 class ProfileController extends Controller
 {
@@ -19,6 +22,7 @@ class ProfileController extends Controller
 
     public function updateInfo(Request $request)
     {
+        sleep(1);
 
         $fields = $request->validate([
             'name' => ['required', 'max:255', 'string'],
@@ -34,5 +38,21 @@ class ProfileController extends Controller
         $request->user()->save();
 
         return redirect()->route('profile.edit');
+    }
+
+    public function updatePassword(Request $request)
+    {
+        sleep(1);
+
+        $fields = $request->validate([
+            'password' => ['required', 'min:4', 'confirmed'],
+            'current_password' => ['required', 'min:4', 'current_password'],
+        ]);
+
+        $request->user()->update([
+            'password' => Hash::make($fields['password'])
+        ]);
+
+        return back();
     }
 }

@@ -7,6 +7,12 @@ export default {
     "./resources/**/*.vue",
     "./node_modules/flowbite/**/*.js"
   ],
+  safelist:[
+    'max-w-sm',
+    'max-w-md',
+    'max-w-lg',
+    'max-w-xl'
+  ],
   theme: {
     extend: {
       fontFamily : {

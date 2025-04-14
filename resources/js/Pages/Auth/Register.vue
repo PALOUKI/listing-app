@@ -29,7 +29,7 @@ const submit = () => {
 <template>
     <Head title="- S'inscrire"/>
 
-    <Container class="pt-24">
+    <Container class="pt-24" screen="md">
         
 
         <form @submit.prevent="submit" class="space-y-6" action="#">

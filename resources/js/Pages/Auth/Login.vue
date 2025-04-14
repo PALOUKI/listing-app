@@ -10,7 +10,8 @@ import SessionMessage from '../../Layouts/Components/SessionMessage.vue';
 
 
 defineProps({
-    status:String
+    status:String,
+
 })
 const form = useForm({
     email:"",
@@ -32,7 +33,7 @@ const submit = () => {
 <template>
     <Head title="- Se connecter"/>
 
-    <Container class="pt-24">
+    <Container class="pt-24" screen="md">
         
 
         <form @submit.prevent="submit" class="space-y-6" action="#">
@@ -53,7 +54,6 @@ const submit = () => {
                 placeholder="Entrez votre email"
                 v-model="form.email"
                 :errorMessage="form.errors.email"
-
             />
 
             <InputField
