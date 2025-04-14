@@ -17,6 +17,8 @@ Route::middleware(['auth'])->group(function () {
         ->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'updateInfo'])
         ->name('profile.info');
+    Route::put('profile', [ProfileController::class, 'updatePassword'])
+        ->name('profile.password');
 });
 
 

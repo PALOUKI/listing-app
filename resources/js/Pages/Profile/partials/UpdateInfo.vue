@@ -40,7 +40,7 @@ const resendEmail = (e) => {
 <template>
     <Container screen="3xl ">
         <div class="my-2">
-            <Title>Modifier votre profil</Title>
+            <Title>Modifier vos informations</Title>
             <p class="">
                 Vous avez la possibilité de modifier vos informations
                 ainsi que l'email associé à votre compte.

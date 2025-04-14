@@ -25,6 +25,7 @@ const errorMessagesFR = {
     "The password field is required.": "Le champ mot de passe est requis.",
     "The password field must be at least 4 characters.": "Le mot de passe doit contenir au moins 4 caractères.",
     "The password field confirmation does not match.": "La confirmation du mot de passe ne correspond pas.",
+    "The current password field is required.": "Le mot de passe actuel est requis",
     "We can't find a user with that email address.": "Nous ne trouvons aucun utilisateur avec cette adresse e-mail"
 };
 
