@@ -34,7 +34,10 @@ const submit = () => {
 
         <form @submit.prevent="submit" class="space-y-6" action="#">
 
-            <Title>Créer un compte</Title>
+            <div class="flex space-x-4">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                <Title>Créer un compte</Title>
+            </div>
 
             <!-- ErrorMessages -->
             
