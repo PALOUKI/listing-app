@@ -19,12 +19,14 @@ const props = defineProps({
 
 // Dictionnaire des erreurs courantes en français
 const errorMessagesFR = {
-    "The name field is required.": "Le champ nom est requis.",
-    "The email field is required.": "Le champ email est requis.",
+    "The name field is required.": "Le nom est requis.",
+    "The email field is required.": "L'email est requis.",
     "The email field must be a valid email address.": "Veuillez entrer une adresse email valide.",
-    "The password field is required.": "Le champ mot de passe est requis.",
+    "The password field is required.": "Le mot de passe est requis.",
     "The password field must be at least 4 characters.": "Le mot de passe doit contenir au moins 4 caractères.",
     "The password field confirmation does not match.": "La confirmation du mot de passe ne correspond pas.",
+    "The password is incorrect.": "Le mot de passe est incorrect.",
+    "The password confirmation field is required.": "Le mot de passe de confirmation est requis",
     "The current password field is required.": "Le mot de passe actuel est requis",
     "We can't find a user with that email address.": "Nous ne trouvons aucun utilisateur avec cette adresse e-mail"
 };

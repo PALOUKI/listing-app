@@ -30,10 +30,17 @@ const submit = () => {
 </script>
 
 <template>
+    <div class="mt-4">
+        <Title>Modifier votre mot de passe</Title>
+    <p class="">
+                Vous avez la possibilité de modifer votre
+                mot de passe pour des raisons de sécurité.
+    </p>
+    </div>
     <Container screen="3xl" class="mt-4">
         <div class="my-2">
 
-            <Title>Modifier votre mot de passe</Title>
+            
 
             <div
                 v-if="form.recentlySuccessful"
@@ -55,10 +62,7 @@ const submit = () => {
                 <span class="font-medium"> Enregistré ! </span>
             </div>
 
-            <p class="">
-                Vous avez la possibilité de modifer votre
-                mot de passe pour des raisons de sécurité.
-            </p>
+            
         </div>
         <form 
             @submit.prevent="submit" 
@@ -69,6 +73,7 @@ const submit = () => {
 
             <InputField
                 label="Mot de passe actuel"
+                placeholder="Entrez le mot de passe actuel"
                 icon="key"
                 type="password"
                 v-model="form.current_password"
@@ -77,6 +82,7 @@ const submit = () => {
 
             <InputField
                 label="Nouveau mot de passe"
+                placeholder="Entrez le nouveau mot de passe"
                 icon="key"
                 type="password"
                 v-model="form.password"
@@ -85,6 +91,7 @@ const submit = () => {
 
             <InputField
                 label="Confirmer votre mot de passe"
+                placeholder="Confirmer votre mot de passe"
                 icon="key"
                 type="password"
                 v-model="form.password_confirmation"

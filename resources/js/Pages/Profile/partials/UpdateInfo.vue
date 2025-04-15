@@ -38,14 +38,15 @@ const resendEmail = (e) => {
 </script>
 
 <template>
-    <Container screen="3xl ">
-        <div class="my-2">
+    <div class="my-2">
             <Title>Modifier vos informations</Title>
             <p class="">
                 Vous avez la possibilité de modifier vos informations
                 ainsi que l'email associé à votre compte.
             </p>
         </div>
+    <Container screen="3xl ">
+        
         <form 
             @submit.prevent="submit" 
             action="">

@@ -38,7 +38,10 @@ const submit = () => {
 
         <form @submit.prevent="submit" class="space-y-6" action="#">
 
-            <Title>Connectez vous</Title>
+            <div class="flex space-x-4">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                <Title>Connectez vous</Title>
+            </div>
 
                         <!-- Message d'erreur global -->
             <div v-if="form.errors.loginError" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md relative text-sm">

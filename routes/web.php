@@ -19,6 +19,8 @@ Route::middleware(['auth'])->group(function () {
         ->name('profile.info');
     Route::put('profile', [ProfileController::class, 'updatePassword'])
         ->name('profile.password');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])
+        ->name('profile.delete');
 });
 
 
